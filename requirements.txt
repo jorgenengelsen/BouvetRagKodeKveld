@@ -1,0 +1,8 @@
+langchain-cli
+langchain
+langchain-core
+langchain-openai
+azure-search-documents
+langchain-community
+azure-identity
+streamlit
