@@ -46,27 +46,6 @@ vector_store: AzureSearch = AzureSearch(
     embedding_function=embeddings.embed_query,
 )
 
-"""
-(Optional) Example document - 
-Uncomment the following code to load the document into the vector store
-or substitute with your own.
-"""
-# import pathlib
-# from langchain.text_splitter import CharacterTextSplitter
-# from langchain_community.document_loaders import TextLoader
-#
-# current_file_path = pathlib.Path(__file__).resolve()
-# root_directory = current_file_path.parents[3]
-# target_file_path = "state_of_the_union.txt"
-#
-# loader = TextLoader(str(target_file_path), encoding="utf-8")
-#
-# documents = loader.load()
-# text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
-# docs = text_splitter.split_documents(documents)
-#
-# vector_store.add_documents(documents=docs)
-
 # RAG prompt
 template = """Answer the question based only on the following context:
 {context}
@@ -83,7 +62,7 @@ _model = AzureChatOpenAI(
     azure_deployment=os.environ["AZURE_CHAT_DEPLOYMENT"],
     api_version=api_version
 )
-chain = (
+rag_chain = (
         RunnableParallel({"context": retriever, "question": RunnablePassthrough()})
         | _prompt
         | _model
@@ -91,7 +70,9 @@ chain = (
 )
 
 
-query = "Har det nylig blitt gjort noen tiltak for jerv i Snåsa?"
-print("Query:" + query)
-print("Answer:" + chain.invoke(query))
-# print("\n\n Context used: " + str(retriever.invoke(query)[0]))
+
+if __name__ == "__main__":
+    query = "Har det nylig blitt gjort noen tiltak for jerv i Snåsa?"
+    print("Query:" + query)
+    print("Answer:" + rag_chain.invoke(query))
+    # print("\n\n Context used: " + str(retriever.invoke(query)[0]))
