@@ -1,5 +1,5 @@
 import streamlit as st
-from rag.chain import rag_chain
+from chain import rag_chain
 
 st.title("🦜🔗 Langchain Quickstart App")
 

@@ -1,5 +1,7 @@
 import os
+import dotenv
 
+dotenv.load_dotenv()
 
 os.environ["AZURESEARCH_FIELDS_ID"] = "chunk_id"
 os.environ["AZURESEARCH_FIELDS_CONTENT"] = "chunk"
@@ -51,7 +53,7 @@ template = """Answer the question based only on the following context:
 {context}
 Question: {question}
 
-answer all questions in Norwegian (nynorsk)
+answer all questions in Norwegian (nynorsk) and specify where you found your information if it is relevant
 """
 
 # Perform a similarity search
@@ -69,6 +71,8 @@ rag_chain = (
         | StrOutputParser()
 )
 
+
+llm_chain = _prompt | _model | StrOutputParser()
 
 
 if __name__ == "__main__":

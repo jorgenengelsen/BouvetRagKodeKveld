@@ -6,3 +6,5 @@ azure-search-documents
 langchain-community
 azure-identity
 streamlit
+python-dotenv
+jupyter
