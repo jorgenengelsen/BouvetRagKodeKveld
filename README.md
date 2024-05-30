@@ -13,6 +13,11 @@ Lag et venv (optional):
 python -m venv .venv
 ```
 
+Aktiver venv:
+```bash
+source .venv/bin/activate
+```
+
 Installer pakker:
 ```bash
 pip install -r requirements.txt
