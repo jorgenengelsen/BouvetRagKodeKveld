@@ -5,6 +5,8 @@ langchain-openai
 azure-search-documents
 langchain-community
 azure-identity
-streamlit
 python-dotenv
 jupyter
+sentence_transformers
+pandas
+plotly
