@@ -26,6 +26,7 @@ Aktiver venv:
 ```bash
 source .venv/bin/activate
 ```
+I winpython cmd skriv ".venv\Scripts\activate"
 
 Installer pakker:
 ```bash
