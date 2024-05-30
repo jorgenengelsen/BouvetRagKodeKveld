@@ -12,15 +12,16 @@
 Requirements:
 - Python 3.10 (eller nyere)
 
-- Naviger til katalogen du har installert python (Winpython) f.eks C:\Users\jens.nilsen\python\WPy64-39100
-- start WinPython Command Prompt.ext
-- Naviger til katalogen /BouvetRagKodekveld (skriv f.eks "cd C:[....]\GitHub\BouvetRagKodeKveld")
+- Naviger til katalogen du har installert python (Winpython) f.eks C:\[...]\python\WPy64-39100
+- start WinPython Command Prompt.exe
+- Naviger til katalogen \BouvetRagKodekveld (skriv f.eks "cd C:[....]\GitHub\BouvetRagKodeKveld")
 
 
 Lag et venv (optional):
 ``` bash
 python -m venv .venv
 ```
+I winpython cmd skriv python -m venv .venv
 
 Aktiver venv:
 ```bash
