@@ -13,7 +13,7 @@ Requirements:
 - Python 3.10 (eller nyere)
 
 - Naviger til katalogen du har installert python (Winpython) f.eks C:\[...]\python\WPy64-39100
-- start WinPython Command Prompt.exe
+- start WinPython Command Prompt.exe (winpython cmd)
 - Naviger til katalogen \BouvetRagKodekveld (skriv f.eks "cd C:[....]\GitHub\BouvetRagKodeKveld")
 
 
@@ -45,3 +45,7 @@ cp .env.template .env
 
 
 Fyll inn nødvendige secrets i `.env`.
+(åpne i f.eks. notepad og lim inn mottatte secrets)
+
+
+- kjør "jupyter notebook" i winpython cmd
