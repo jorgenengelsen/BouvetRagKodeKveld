@@ -27,13 +27,13 @@ Aktiver venv:
 ```bash
 source .venv/bin/activate
 ```
-I winpython cmd skriv ".venv\Scripts\activate"
+- I winpython cmd skriv ".venv\Scripts\activate"
 
 Installer pakker:
 ```bash
 pip install -r requirements.txt
 ```
-- I winpyton command prompt skriv pip install -r requirements.txt
+- I winpyton command prompt skriv "pip install -r requirements.txt"
 
 ### Miljøvariabler
 
@@ -41,5 +41,7 @@ Kopier env template:
 ```bash
 cp .env.template .env
 ```
+- I winpyton command promt skriv "copy .env.template .env"
+
 
 Fyll inn nødvendige secrets i `.env`.
